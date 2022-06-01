@@ -576,6 +576,13 @@ if isa(vImarisApplication, 'Imaris.IApplicationPrxHelper')
             aImarisFolder(aDelimiters(2)) = [];
             aImarisFolder(aDelimiters(1)) = ' ';
         end
+        %Find/remove x64 --- fix for Imaris 9.8 and later
+        aImarisNumberVersion = str2num(aImarisFolder(end-4:end-2));
+        if aImarisNumberVersion <= 9.8
+           aImarisFolder = erase(aImarisFolder,' x64');
+        end
+        
+        
         if isequal(qHeatMap, 'YES') | isequal(qBiofilmHeatMap, 'YES') && isequal (qSurfaceMask, 'YES') | isequal (qThicknessDistribution, 'YES')%will only work for surface and observed area
             
             %Set Colot LUT
