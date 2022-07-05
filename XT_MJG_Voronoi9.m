@@ -206,6 +206,21 @@ vImarisApplication.SetChannelVisibility(vNumberOfChannels+1,0);
 vImarisApplication.SetChannelVisibility(vNumberOfChannels ,0);
 
 
+
+function fun = makelinefun(x1,y1,x2,y2,o)
+%ref http://stackoverflow.com/questions/13209373/matlab-straight-line-between-2-points-with-n-points-between
+if nargin < 5
+    o = 1;
+end
+if o == 2,
+    fun  = @(N) deal(linspace(x1,x2,N), linspace(y1,y2,N));
+else
+	fun  = @(N) [linspace(x1,x2,N) ; linspace(y1,y2,N)];
+end
+
+
+
+
 function mask = voronoi2mask(x,y,szImg,vDataSize)
 %
 % voronoi2mask Convert Voronoi cells to region mask
