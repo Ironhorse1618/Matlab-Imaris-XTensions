@@ -13,7 +13,7 @@
 %    <CustomTools>
 %      <Menu>
 %        <Item name="Channel Arithmetics - NEW ratio" icon="Matlab" tooltip="Create a new channel combining the others using a regular expression.">
-%          <Command>MatlabXT::XTChannelArithmeticsNAN-INF_tozero(%i)</Command>
+%          <Command>MatlabXT::XTChannelArithmeticsNAN_INF_tozero(%i)</Command>
 %        </Item>
 %      </Menu>
 %    </CustomTools>
@@ -24,7 +24,7 @@
 %   Create a new channel combining the others using a regular expression. 
 % 
 
-function XTChannelArithmeticsNAN-INF_tozero(aImarisApplicationID)
+function XTChannelArithmeticsNAN_INF_tozero(aImarisApplicationID)
 
 % get the application object
 if isa(aImarisApplicationID, 'Imaris.IApplicationPrxHelper')
