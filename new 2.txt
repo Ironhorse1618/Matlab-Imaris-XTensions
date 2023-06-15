@@ -1,9 +1,0 @@
-Site Reference:	4438 (US-BPI.Float.MatthewGastinger)
-Server HostID:	04421AF016AA
-Domain Name:	USCONWS3970
-Port Number:	2700
-HostID-Range:	*.*.*.*
-Path to Daemon:	c:\rlm
-Last change:	2022-08-16 16:32:36.0 by gastinger
-Additional Parameters for RLM:
-Port Number of ISV Server:	2701
